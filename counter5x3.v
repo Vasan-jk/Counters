@@ -1,24 +1,5 @@
 
 `timescale 1ns / 1ps
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:    13:58:26 06/10/24
-// Design Name:    
-// Module Name:    main
-// Project Name:   
-// Target Device:  
-// Tool versions:  
-// Description:
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
 module counter5x3(cout,carry,sum, x0,x1,x2,x3,x4);
     output cout,carry,sum;
     input x0,x1,x2,x3,x4;
@@ -40,6 +21,15 @@ module counter5x3(cout,carry,sum, x0,x1,x2,x3,x4);
 	mux m2(w9,w7,w8,x2);
 
 	mux m3(carry,w6,w9,w3);
+
+
+endmodule
+
+module mux(o, a,b,s);
+    output o;
+    input a,b,s;
+
+	assign o = s?b:a;
 
 
 endmodule
