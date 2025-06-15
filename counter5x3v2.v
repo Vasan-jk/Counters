@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:    17:53:27 06/11/24
-// Design Name:    
-// Module Name:    main2
-// Project Name:   
-// Target Device:  
-// Tool versions:  
-// Description:
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
 module main2(cout,carry,sum, x0,x1,x2,x3,x4);
     output cout,carry,sum;
     input x0,x1,x2,x3,x4;
@@ -37,3 +18,11 @@ module main2(cout,carry,sum, x0,x1,x2,x3,x4);
 	mux m2(w7, w6, sum,x1);
 	mux m2(carry, w7, x1, w3);
 
+module mux(o, a,b,s);
+    output o;
+    input a,b,s;
+
+	assign o = s?b:a;
+
+
+endmodule
